@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="glasluisaS2B.Views.vHome"
+             Title="vHome">
+    <VerticalStackLayout Spacing="25"
+                         Padding="25"> 
+        <Label 
+            Text="Welcome to .NET MAUI!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Entry x:Name="txtNombre"
+               Placeholder="Ingrese un nombre">
+        </Entry>
+
+        <Picker x:Name="pkCiudades"
+                Title="CIUDADES DE ECUADOR ">
+            <Picker.Items>
+                <x:String>QUITO</x:String>
+                <x:String>GUAYAQUIL</x:String>
+                <x:String>CUENCA</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <DatePicker x:Name="dpkFecha"
+                    Date="01/01/2024"
+                    Format="MM/DD/YYYY"/>
+
+        <Label x:Name="lblFecha" TextColor="red"
+               FontSize="16"/>
+
+        <Button x:Name="btnMostrar"
+                Text="MOSTRAR ELEMENTO"
+                Clicked="btnMostrar_Clicked"/>
+
+    </VerticalStackLayout>
+</ContentPage>
